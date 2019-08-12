@@ -14,9 +14,6 @@ def naive_bayes_fit(X, y):
 		stds = [np.std(f[y==cl]) for cl in categories]
 		dist_list.append(norm(loc=means, scale=stds))
 
-	# dist_list = [norm(loc=[np.mean(f[y==cl]) for cl in categories],
-	# 				  scale=[np.std(f[y==cl]) for cl in categories]) 
-	# 			 for f in X.T]
 	return dist_list, p_cat
 
 
