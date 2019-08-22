@@ -22,9 +22,6 @@ def k_nearest_neighbors_classify(sample, X, y, k=3):
 def main():
 	iris = datasets.load_iris()
 
-	# X = iris.data[:,2:]
-	# y = iris.target
-
 	n_samples = iris.target.shape[0]
 	k_range = range(1, 10)
 
