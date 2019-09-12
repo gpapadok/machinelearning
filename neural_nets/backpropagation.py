@@ -25,7 +25,7 @@ def backpropagation(X, y, Theta1, Theta2, lr, debug=False):
 
     # BACKPROP
 
-    d3 = y - a3
+    d3 = (y - a3) * a3 * (1 - a3)
 
     if debug==True:
         print (np.sum(np.square(d3)))
