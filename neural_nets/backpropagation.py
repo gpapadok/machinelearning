@@ -1,12 +1,10 @@
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 import numpy as np
-from math import exp
 
 
 def sigmoid(z):
-    vexp = np.vectorize(exp)
-    return 1 / (1 + vexp(-z))
+    return 1 / (1 + np.exp(-z))
 
 def forward_propagation(X, Theta1, Theta2):
     m = X.shape[0]
