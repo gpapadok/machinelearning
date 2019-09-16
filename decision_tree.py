@@ -1,7 +1,7 @@
+import pprint
+
 from sklearn import datasets
 import numpy as np
-from math import log2
-import pprint
 
 
 def calculate_entropy(y):
@@ -9,7 +9,7 @@ def calculate_entropy(y):
 	_, counts = np.unique(y, return_counts=True)
 	entropy = 0
 	for c in counts:
-		entropy -= c / n_samples * log2(c / n_samples)
+		entropy -= c / n_samples * np.log2(c / n_samples)
 	return entropy
 
 
