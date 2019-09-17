@@ -2,7 +2,7 @@ from sklearn import datasets
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
-import random
+
 
 def pca(X, n):
     # X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
@@ -18,7 +18,7 @@ def kmeans(X, n_clusters):
     n_samples, n_features = X.shape
 
     # initialiaze centroids
-    rand_indices = random.sample(range(n_samples), n_clusters)
+    rand_indices = np.random.choice(range(n_samples), size=n_clusters, replace=False)
     centroids = X[rand_indices,:]
 
     
